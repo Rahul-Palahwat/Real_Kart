@@ -1,4 +1,4 @@
-import { Flex, Button, FormControl, FormLabel, Input, Textarea, RadioGroup, Stack, Radio, Select, Grid } from '@chakra-ui/react'
+import { Flex, Button, FormControl, FormLabel, Input, Textarea, RadioGroup, Stack, Radio, Select, Grid, useToast } from '@chakra-ui/react'
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 
@@ -14,8 +14,17 @@ const PlaceOrder: React.FC = () => {
 
     const navigate = useNavigate();
 
+    const toast = useToast();
+
     const orderDone=()=>{
-        window.alert("Order successfully placed!");
+        toast({
+            position: 'top',
+            title: 'Order placed successfully',
+            description: `We've placed order of ${sum}`,
+            status: 'success',
+            duration: 9000,
+            isClosable: true,
+          })
         dispatch(orderItem());
         navigate('/');
 
