@@ -93,7 +93,7 @@ const Cart:React.FC= () => {
             <Flex ml="2" mt="5" borderBottom={"2px solid grey"}></Flex>
 
             <Flex ml="2" mt="8" justifyContent={"center"}>
-              <Button backgroundColor={"orange.400"} width={"80%"} height="12" fontSize={"2xl"} onClick={() => {items.length>0?navigate('/checkout'):navigate('/')}}>{items.length>0?'Place Order':'Add Item'}</Button>
+              <Button backgroundColor={"orange.400"} width={"80%"} height="12" fontSize={"2xl"} onClick={() => {items.length>0?navigate('/checkout'):navigate('/')}}>{items.length>0?'CheckOut':'Add Item'}</Button>
             </Flex>
             
           </Flex>

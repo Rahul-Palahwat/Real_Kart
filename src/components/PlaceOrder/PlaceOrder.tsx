@@ -1,11 +1,25 @@
-import { Flex, Button, FormControl, FormLabel, Input, Textarea, RadioGroup, Stack, Radio, Select } from '@chakra-ui/react'
+import { Flex, Button, FormControl, FormLabel, Input, Textarea, RadioGroup, Stack, Radio, Select, Grid } from '@chakra-ui/react'
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
-import { useAppSelector } from '../../Redux/app/hooks'
+import { useAppSelector , useAppDispatch} from '../../Redux/app/hooks'
+
+import { orderItem } from '../../Redux/features/Cart/Cart';
 
 const PlaceOrder: React.FC = () => {
 
-    const { items, sum } = useAppSelector((state) => state.cart)
+    const dispatch = useAppDispatch();
+
+    const { items, sum } = useAppSelector((state) => state.cart);
+
+    const navigate = useNavigate();
+
+    const orderDone=()=>{
+        window.alert("Order successfully placed!");
+        dispatch(orderItem());
+        navigate('/');
+
+    }
 
     return (
         <div>
@@ -62,7 +76,7 @@ const PlaceOrder: React.FC = () => {
                         </Flex>
 
 
-                        <Flex width={"30vw"} >
+                        <Flex width={"30vw"} borderRadius={5}>
                             <Flex width={"30vw"} height={"auto"} direction={"column"} wrap="wrap">
                                 <Flex height={"5vh"} fontSize="xl" ml="2" mt="2" borderBottom={"0.5px solid grey"} justifyContent="center">Price Details</Flex>
 
@@ -76,7 +90,7 @@ const PlaceOrder: React.FC = () => {
 
                                 <Flex ml="2" mt="4" justifyContent={"space-between"} fontSize="2xl">
                                     <Flex>Discount</Flex>
-                                    <Flex color={"green.400"}>{sum > 1000 ? 1000 : 0}</Flex>
+                                    <Flex color={"green.400"}>-{sum > 1000 ? 1000 : 0}</Flex>
                                 </Flex>
 
                                 <Flex ml="2" mt="4" justifyContent={"space-between"} fontSize="2xl">
@@ -102,21 +116,21 @@ const PlaceOrder: React.FC = () => {
 
                     <Flex height={"33vh"} justifyContent={"center"}>
 
-                        <Flex width={"87%"} direction={"column"} pt={3} pb={3}>
+                        <Flex width={"87%"} direction={"column"} pb={3}>
 
-                            <Flex height={"4vh"} alignItems='center' fontWeight={"extrabold"} pb={2} pt={1} >Payment Options:</Flex>
+                            <Flex height={"4vh"} alignItems='center' fontWeight={"extrabold"} pb={5}>Payment Options:</Flex>
 
 
                             <Flex mt={2}>
                                 <RadioGroup>
-                                    <Flex direction={"column"}>
-                                        <Radio value='1' mb={1}>BHIM UPI</Radio>
-                                        <Radio value='2' mb={1}>Wallets</Radio>
-                                        <Radio value='3' mb={1}>Credit/Debit/ATM Card</Radio>
-                                        <Radio value='4' mb={1}>Net Banking</Radio>
-                                        <Radio value='5' mb={1}>EMI</Radio>
-                                        <Radio value='6' mb={1}>Cash On Delivery</Radio>
-                                    </Flex>
+                                    <Grid templateColumns={"repeat(2,1fr)"}>
+                                        <Radio value='1' mb={5} width={"27vw"}>BHIM UPI</Radio>
+                                        <Radio value='2' mb={5}>Wallets</Radio>
+                                        <Radio value='3' mb={5}>Credit/Debit/ATM Card</Radio>
+                                        <Radio value='4' mb={5}>Net Banking</Radio>
+                                        <Radio value='5' mb={5}>EMI</Radio>
+                                        <Radio value='6' mb={5}>Cash On Delivery</Radio>
+                                    </Grid>
                                 </RadioGroup>
                             </Flex>
 
@@ -133,7 +147,7 @@ const PlaceOrder: React.FC = () => {
 
                     <Flex height={"10vh"} width={"90vw"} alignItems={"center"} justifyContent={"flex-end"} >
                         <Flex justifyContent={"center"} mr={2}>
-                            <Button backgroundColor={"orange.400"} width={"30vh"} height="12" fontSize={"2xl"} mb={2}>Place order</Button>
+                            <Button backgroundColor={"orange.400"} width={"30vh"} height="12" fontSize={"2xl"} mb={2} onClick={()=>orderDone()}>Place order</Button>
                         </Flex>
                     </Flex>
 

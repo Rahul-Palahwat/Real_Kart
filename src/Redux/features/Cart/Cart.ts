@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { stat } from "fs";
 import _ from "lodash";
 
 import totalitems from '../../../components/data.json';
@@ -28,6 +29,10 @@ export const addItem = createAsyncThunk('cart/addItem' , async(itemCode: number)
 
 export const removeItem = createAsyncThunk('cart/removeItem', async(itemCode: number) => {
     return itemCode
+})
+
+export const orderItem = createAsyncThunk('cart/orderItem', async()=>{
+    return 
 })
 
 
@@ -60,6 +65,8 @@ const cartSlice = createSlice ({
             state.error = actions.error.message || "CanNot add item to cart"
         })
 
+
+
         builder.addCase(removeItem.pending , state => {
             state.loading = true
         })
@@ -74,6 +81,20 @@ const cartSlice = createSlice ({
         builder.addCase(removeItem.rejected , (state , actions) => {
             state.loading = false
             state.error = actions.error.message || "Item can'nt be removed from cart"
+        })
+
+        builder.addCase(orderItem.pending , state =>{
+            state.loading = true
+        })
+        builder.addCase(orderItem.fulfilled , (state,actions) => {
+            state.loading = false
+            state.sum=0
+            state.items=[]
+            state.error=''
+        })
+        builder.addCase(orderItem.rejected , (state ,actions) => {
+            state.loading = false
+            state.error = actions.error.message || "Can not place order at this momment"
         })
     }
 })
