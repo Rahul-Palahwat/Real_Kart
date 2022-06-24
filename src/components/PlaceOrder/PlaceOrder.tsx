@@ -1,4 +1,4 @@
-import { Flex, Button, FormControl, FormLabel, Input } from '@chakra-ui/react'
+import { Flex, Button, FormControl, FormLabel, Input, Textarea, RadioGroup, Stack, Radio } from '@chakra-ui/react'
 import React from 'react'
 
 const PlaceOrder: React.FC = () => {
@@ -16,16 +16,38 @@ const PlaceOrder: React.FC = () => {
                         <Flex width={"60vw"} border="1px solid aqua" justifyContent={"center"}>
                             <Flex width={"60vw"} direction="column" alignItems={"center"}>
                                 <Flex fontSize={"2xl"}>Shipping and Billing address</Flex>
-                            <Flex width={"80%"} borderTop="1px solid blue">
-                            <FormControl>
-                                {/* <FormLabel htmlFor='email'>Name</FormLabel> */}
-                                <Flex justifyContent={"space-between"}>
-                                <Input id='name' type='name' placeholder='Enter Name' width={"45%"}/>
-                                <Input id='name' type='name' placeholder='Enter Name' width={"45%"}/>
+                                <Flex width={"80%"} borderTop="1px solid grey" pb={4}>
+                                    <FormControl>
+                                        {/* <FormLabel htmlFor='email'>Name</FormLabel> */}
+                                        <Flex justifyContent={"space-between"} mt={4}>
+                                            <Input id='name' type='name' placeholder='Enter Name' width={"45%"} />
+                                            <Input id='phone' type='number' placeholder='Enter Mobile Number' width={"45%"} />
+                                        </Flex>
+                                        <Textarea id='address' placeholder='Address' mt={4} />
+                                        <Flex justifyContent={"space-between"} mt={4}>
+                                            <Input id='city' type='name' placeholder='City' width={"45%"} />
+                                            <Input id='state' type='name' placeholder='State' width={"45%"} />
+                                        </Flex>
+                                        <Flex justifyContent={"space-between"} mt={4} borderBottom={"1px solid grey"} pb={5}>
+                                            <Input id='pin' type='number' placeholder='Pin' width={"45%"} />
+                                            <Input id='country' type='name' placeholder='Country' width={"45%"} />
+                                        </Flex >
+                                        <RadioGroup mt={4}>
+                                            <FormLabel htmlFor='radio'>Address Type</FormLabel>
+                                            <Flex justifyContent={"space-between"}>
+                                                <Radio colorScheme='green' value='1' id="radio">
+                                                    Home (AnyTime Delivery)
+                                                </Radio>
+                                                <Radio colorScheme='red' value='2' id="radio">
+                                                    Office (Delivery between 10AM - 5PM)
+                                                </Radio>
+                                            </Flex>
+                                        </RadioGroup>
+
+
+                                    </FormControl>
+
                                 </Flex>
-                                
-                            </FormControl>
-                            </Flex>
                             </Flex>
 
                         </Flex>
@@ -69,7 +91,29 @@ const PlaceOrder: React.FC = () => {
                     </Flex>
 
 
-                    <Flex height={"30vh"} border="1px solid blue">Payment
+                    <Flex height={"30vh"} border="1px solid blue" justifyContent={"center"}>
+
+                        <Flex width={"90%"} border="2px solid yellow" direction={"column"}>
+
+                            <Flex height={"4vh"} alignItems='center' fontWeight={"extrabold"} borderBottom="2px solid red" pb={2} pt={1} backgroundColor="orange.300">Payment Options:</Flex>
+
+
+                            <Flex mt={2}>
+                                <RadioGroup>
+                                    <Flex direction={"column"}>
+                                        <Radio value='1' mb={1}>BHIM UPI</Radio>
+                                        <Radio value='2' mb={1}>Wallets</Radio>
+                                        <Radio value='3' mb={1}>Credit/Debit/ATM Card</Radio>
+                                        <Radio value='4' mb={1}>Net Banking</Radio>
+                                        <Radio value='5' mb={1}>EMI</Radio>
+                                        <Radio value='6' mb={1}>Cash On Delivery</Radio>
+                                    </Flex>
+                                </RadioGroup>
+                            </Flex>
+
+
+
+                        </Flex>
 
                     </Flex>
 
