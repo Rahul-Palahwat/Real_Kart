@@ -24,15 +24,15 @@ const CartItem:React.FC <Props> = (props) => {
     const {image, title, desc, price, itemCode} = props;
   return (
     <div>
-      <Flex wrap={"wrap"} mt={3} mb={2} width={"58vw"} height={"auto"} border="2px solid blue" alignItems={"center"}>
+      <Flex wrap={"wrap"} mt={3} mb={2} width={"58vw"} height={"auto"} border="1px solid grey" alignItems={"center"}>
 
-        <Flex width={"25vh"} height={"25vh"} border="1px solid orange">
+        <Flex width={"25vh"} height={"25vh"}>
             <img src={image[0]} alt="Image" style={{"height":"25vh","width":"25vh"}}/>
         </Flex>
 
-        <Flex ml="3" width={"60vh"} height={"auto"} border="1px solid orange" direction={"column"}>
-            <Flex fontSize={"xl"} height={"auto"} mt="2" border="2px solid pink" wrap={"wrap"}>{title}</Flex>
-            <Flex height={"auto"} mt="2" border="2px solid pink" wrap={"wrap"}>
+        <Flex ml="3" width={"60vh"} height={"auto"} direction={"column"}>
+            <Flex fontSize={"xl"} height={"auto"} mt="2" borderBottom="1px solid pink" wrap={"wrap"}>{title}</Flex>
+            <Flex height={"auto"} mt="2" borderBottom="1px solid pink" wrap={"wrap"}>
               { _.map(desc, (key, value) => {
                 description.push(key)
                  return <></>

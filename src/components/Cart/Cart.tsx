@@ -39,7 +39,7 @@ const Cart:React.FC= () => {
 
 
           {items.length>0?
-          <Flex width={"60vw"} height={items.length>=3?'auto':'100vh'} border="1px solid red" direction={"column"}>
+          <Flex width={"60vw"} height={items.length>=3?'auto':'100vh'} direction={"column"}>
 
             <Flex height={"5vh"} fontSize="xl" ml="2" mt="2" borderBottom={"0.5px solid grey"}>Items-{items.length}</Flex>
             
@@ -56,13 +56,13 @@ const Cart:React.FC= () => {
 
 
           </Flex>
-          :<Flex fontSize={"3xl"} justifyContent={"center"} width={"60vw"} height={items.length>=2?'auto':'80vh'} border="1px solid red" direction={"column"}>Cart Is Empty</Flex>}
+          :<Flex fontSize={"3xl"} justifyContent={"center"} width={"60vw"} height={items.length>=2?'auto':'80vh'} direction={"column"}>Cart Is Empty</Flex>}
 
 
 
 
 
-          <Flex width={"30vw"} height={"auto"} border="1px solid green" direction={"column"} wrap="wrap">
+          <Flex width={"30vw"} height={"auto"} direction={"column"} wrap="wrap">
             <Flex height={"5vh"} fontSize="xl" ml="2" mt="2" borderBottom={"0.5px solid grey"} justifyContent="center">Price Details</Flex>
 
             <Flex ml="2" mt="4" justifyContent={"space-between"}>
@@ -93,7 +93,7 @@ const Cart:React.FC= () => {
             <Flex ml="2" mt="5" borderBottom={"2px solid grey"}></Flex>
 
             <Flex ml="2" mt="8" justifyContent={"center"}>
-              <Button backgroundColor={"orange.400"} width={"80%"} height="12" fontSize={"2xl"} onClick={() => navigate('/checkout')}>Place order</Button>
+              <Button backgroundColor={"orange.400"} width={"80%"} height="12" fontSize={"2xl"} onClick={() => {items.length>0?navigate('/checkout'):navigate('/')}}>{items.length>0?'Place Order':'Add Item'}</Button>
             </Flex>
             
           </Flex>
