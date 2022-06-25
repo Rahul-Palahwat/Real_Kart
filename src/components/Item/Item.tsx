@@ -29,12 +29,12 @@ export const Item = (props:Props) => {
     const itemcodes =  _.map(data, (el) => {
         return el.itemCode
     })
-    console.log({itemcodes})
+    // console.log({itemcodes})
     const {items, loading} = useAppSelector((state)=> state.cart)
 
     const dispatch = useAppDispatch();
     const [buttonId, setButtonId] =  useState(0)
-    console.log({a: items.includes(itemCode), itemCode, items})
+    // console.log({a: items.includes(itemCode), itemCode, items})
 
   return (
     <div className='total'>
@@ -55,6 +55,7 @@ export const Item = (props:Props) => {
                 ):null} */}
                 <Flex mt={2} mb={2} width="100%" justifyContent={"center"}>
                     <Button 
+                        className='items'
                         isLoading={loading && buttonId === itemCode} 
                         isDisabled={(loading && buttonId !== itemCode)} 
                         // { (items.includes(itemCode)) ? background={"blue.500"} : background={"blue.500"}} 

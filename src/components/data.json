@@ -1,7 +1,7 @@
 [
   {
       "itemCode": 1,
-      "category": "mobiles",
+      "category": "Electronic",
       "imgLink":[ "https://rukminim2.flixcart.com/image/832/832/ky0g58w0/mobile/c/a/v/-original-imagabvq2zhfb2fk.jpeg?q=70",
          " https://www.reliancedigital.in/medias/Vivo-V23-Smartphones-492574740-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w3NTA4MXxpbWFnZS9qcGVnfGltYWdlcy9oMDAvaDhlLzk3NjkwNDczNTk1MTguanBnfGFlZDE5ZWQzMDNiY2MzMGZjN2FmM2U2OGJiNjlkNzdkNDk3NDAzNDlmY2I1NDUyMzc1ZTI3MmFlNzI2M2JkOTk",
          "https://www.reliancedigital.in/medias/Vivo-V23-Smart-Phone-492574740-i-4-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w0Mjg5NXxpbWFnZS9qcGVnfGltYWdlcy9oMTgvaDM3Lzk3NTA2NDE4Njg4MzAuanBnfGJkNDBkNmZiZWQzYjFiOTM2NWE5NmNhMDA0NGI0NzQ0NGZjYzE5NzM4ZDcwYTkzMTc2NjRiNGZlYWFiMjliMDM"
@@ -20,7 +20,7 @@
   },
   {
       "itemCode": 2,
-      "category": "mobiles",
+      "category": "Electronic",
       "imgLink":[ "https://apollo-singapore.akamaized.net/v1/files/4t20y0c24yq13-IN/image;s=780x0;q=60",
       "https://apollo-singapore.akamaized.net/v1/files/s8cda5dneu2l3-IN/image;s=780x0;q=60",
       "https://apollo-singapore.akamaized.net/v1/files/wi13s3s2w50b3-IN/image;s=780x0;q=60"
@@ -41,7 +41,7 @@
   {
       
           "itemCode": 3,
-          "category": "car",
+          "category": "Vehicles",
           "imgLink": ["https://apollo-singapore.akamaized.net/v1/files/bm2ziytakw4i-IN/image;s=1080x1080","https://apollo-singapore.akamaized.net/v1/files/r7zp2i9n9vpe1-IN/image;s=780x0;q=60"],
           "title": "honda city (2015)",
           "location":"Raj Nagar RDC, Ghaziabad",
@@ -64,7 +64,7 @@
   },
   {
       "itemCode": 4,
-      "category": "car",
+      "category": "Vehicles",
       "imgLink": ["https://apollo-singapore.akamaized.net/v1/files/oy8qbwolk4aq-IN/image;s=780x0;q=60",
       "https://apollo-singapore.akamaized.net/v1/files/r2rg0xehbckd1-IN/image;s=780x0;q=60"
       ],
@@ -88,7 +88,7 @@
   },
   {
       "itemCode": 5,
-      "category": "car",
+      "category": "Vehicles",
       "imgLink": ["https://apollo-singapore.akamaized.net/v1/files/gc8xf0982drf2-IN/image;s=780x0;q=60",
           "https://apollo-singapore.akamaized.net/v1/files/406lxikkj39w1-IN/image;s=1080x1080",
           "https://apollo-singapore.akamaized.net/v1/files/b2g67x6ifjn91-IN/image;s=1080x1080"
@@ -115,7 +115,7 @@
   },
   {
       "itemCode": 6,
-      "category": "car",
+      "category": "Vehicles",
       "imgLink": ["https://apollo-singapore.akamaized.net/v1/files/gc8xf0982drf2-IN/image;s=780x0;q=60",
           "https://apollo-singapore.akamaized.net/v1/files/406lxikkj39w1-IN/image;s=1080x1080",
           "https://apollo-singapore.akamaized.net/v1/files/b2g67x6ifjn91-IN/image;s=1080x1080"
@@ -142,7 +142,7 @@
   },
   {
       "itemCode": 7,
-      "category": "Appliances",
+      "category": "Electronic",
       "imgLink":[ "https://rukminim2.flixcart.com/image/416/416/kevpwnk0/washing-machine-new/g/t/5/wa65a4002vs-tl-samsung-original-imafvgz4qzfazbsh.jpeg?q=70",
       "https://rukminim2.flixcart.com/image/416/416/kevpwnk0/washing-machine-new/g/t/5/wa65a4002vs-tl-samsung-original-imafvgz4fsahdzhg.jpeg?q=70",
       "https://rukminim2.flixcart.com/image/416/416/kevpwnk0/washing-machine-new/g/t/5/wa65a4002vs-tl-samsung-original-imafvgz4dwezp9wy.jpeg?q=70"],
@@ -171,7 +171,7 @@
   },
   {
       "itemCode": 9,
-      "category": "Scooter",
+      "category": "Vehicles",
       "imgLink":["https://apollo-singapore.akamaized.net/v1/files/08r7t29uxgs03-IN/image;s=780x0;q=60",
           "https://apollo-singapore.akamaized.net/v1/files/z9yh4ctrl6fn1-IN/image;s=780x0;q=60",
       "https://apollo-singapore.akamaized.net/v1/files/08r7t29uxgs03-IN/image;s=780x0;q=60"], 
@@ -186,7 +186,7 @@
   },
   {
       "itemCode": 10,
-      "category": "Scooter",
+      "category": "Vehicles",
       "imgLink":["https://apollo-singapore.akamaized.net/v1/files/vrsuzdm27znt2-IN/image;s=780x0;q=60",
           "https://apollo-singapore.akamaized.net/v1/files/tjwh5s1m9jc41-IN/image;s=780x0;q=60"], 
       "title": "Tvs scooty pep ( model - 2015 )",
@@ -200,7 +200,7 @@
   },
   {
       "itemCode": 11,
-      "category": "Camera",
+      "category": "Electronic",
       "imgLink":["https://apollo-singapore.akamaized.net/v1/files/8d2gm1ntyzgk3-IN/image;s=780x0;q=60",
           "https://apollo-singapore.akamaized.net/v1/files/rdqmy6y4vhns2-IN/image;s=780x0;q=60"], 
       "title": "Canon 200D mark-II, under warranty, with two lenses",
@@ -214,7 +214,7 @@
   },
   {
       "itemCode": 12,
-      "category": "Camera",
+      "category": "Electronic",
       "imgLink":["https://apollo-singapore.akamaized.net/v1/files/tbljfzfvj2b23-IN/image;s=780x0;q=60",
           "https://apollo-singapore.akamaized.net/v1/files/grbkfje8qnjd1-IN/image;s=780x0;q=60"], 
       "title": "SONY NX5",
@@ -229,7 +229,7 @@
   },
   {
       "itemCode": 13,
-      "category": "Insutruments",
+      "category": "General",
       "imgLink":["https://apollo-singapore.akamaized.net/v1/files/iekv8pabesbm-IN/image;s=780x0;q=60",
           "https://www.olx.in/item/brand-new-harmoniam-iid-1683229678"], 
       "title": "harmonium",
@@ -243,7 +243,7 @@
   },
   {
       "itemCode": 14,
-      "category": "Insutruments",
+      "category": "General",
       "imgLink":["https://apollo-singapore.akamaized.net/v1/files/100839nbm5wc-IN/image;s=780x0;q=60"], 
       "title": "Acoustic Guitar",
       "location":"Bhopal,Madhya pradesh",
@@ -256,7 +256,7 @@
   },
   {
       "itemCode": 15,
-      "category": "laptop",
+      "category": "Electronic",
       "imgLink":["https://apollo-singapore.akamaized.net/v1/files/lylveobttxf01-IN/image;s=780x0;q=60",
          " https://apollo-singapore.akamaized.net/v1/files/qd59cwjdeujl1-IN/image;s=780x0;q=60"], 
       "title": "DELL LAPTOP XPS 15 inch Business Edition laptop",
@@ -270,7 +270,7 @@
   },
   {
       "itemCode": 16,
-      "category": "laptop",
+      "category": "Electronic",
       "imgLink":["https://apollo-singapore.akamaized.net/v1/files/l7mhxxj1z4kx-IN/image;s=780x0;q=60",
          " https://apollo-singapore.akamaized.net/v1/files/nkz4mbtvlwlq2-IN/image;s=780x0;q=60"], 
       "title": "MacBook air A1932",
@@ -284,7 +284,7 @@
   },
   {
       "itemCode": 17,
-      "category": "sports",
+      "category": "General",
       "imgLink":["https://apollo-singapore.akamaized.net/v1/files/zwmfpmvhuvzv-IN/image;s=780x0;q=60",
          "https://apollo-singapore.akamaized.net/v1/files/etcuj37spqqa-IN/image;s=780x0;q=60"], 
       "title": "Lawn tennis Rackets & Badminton Racket",
@@ -298,7 +298,7 @@
   },
   {
       "itemCode": 18,
-      "category": "sports",
+      "category": "General",
       "imgLink":["https://apollo-singapore.akamaized.net/v1/files/duw5chvh8ksw-IN/image;s=780x0;q=60",
          "https://apollo-singapore.akamaized.net/v1/files/aiq787sep3sy2-IN/image;s=780x0;q=60"], 
       "title": "Gm imported cricket bat",
@@ -312,7 +312,7 @@
   },
   {
       "itemCode": 19,
-      "category": "Fitness",
+      "category": "General",
       "imgLink":["https://apollo-singapore.akamaized.net/v1/files/jgjb798n8rj71-IN/image;s=780x0;q=60",
          "https://apollo-singapore.akamaized.net/v1/files/1de3xb7hf0ba-IN/image;s=780x0;q=60"], 
       "title": "FIT Plus FP1(30 lbs Flywheel) exercise bike",
@@ -325,7 +325,7 @@
       }  
   },
   {"itemCode": 20,
-      "category": "Fitness",
+      "category": "General",
       "imgLink":["https://apollo-singapore.akamaized.net/v1/files/52cz0zzxm6sb3-IN/image;s=780x0;q=60",
          "https://apollo-singapore.akamaized.net/v1/files/4kd1l7nq9w1y-IN/image;s=780x0;q=60"], 
       "title": "Heavy duty full commercial gym equipment machine setup",
@@ -340,7 +340,7 @@
 
   {
       "itemCode": 21,
-      "category": "mobiles",
+      "category": "Electronic",
       "imgLink":[ "https://apollo-singapore.akamaized.net/v1/files/w0zqltfh6oih2-IN/image;s=780x0;q=60",
          " https://apollo-singapore.akamaized.net/v1/files/nh21nzc0tmz92-IN/image;s=780x0;q=60"
 ],
@@ -360,7 +360,7 @@
   },
   {
       "itemCode": 22,
-      "category": "mobiles",
+      "category": "Electronic",
       "imgLink":[ "https://apollo-singapore.akamaized.net/v1/files/7qy0mq091tjr1-IN/image;s=780x0;q=60",
          "https://apollo-singapore.akamaized.net/v1/files/uwufyfef0okr3-IN/image;s=780x0;q=60"
 ],
@@ -380,7 +380,7 @@
   },
   {
       "itemCode": 23,
-      "category": "mobiles",
+      "category": "Electronic",
       "imgLink":[ "https://apollo-singapore.akamaized.net/v1/files/b4jko9tlafxg1-IN/image;s=780x0;q=60",
          "https://apollo-singapore.akamaized.net/v1/files/41u1bsbijh5x2-IN/image;s=780x0;q=60"
 ],
@@ -399,7 +399,7 @@
       
   },{
       "itemCode": 24,
-      "category": "mobiles",
+      "category": "Electronic",
       "imgLink":[ "https://apollo-singapore.akamaized.net/v1/files/mjlxcxlsadbj3-IN/image;s=780x0;q=60",
          "https://apollo-singapore.akamaized.net/v1/files/qkvnl8hmjj7h2-IN/image;s=780x0;q=60"
 ],
@@ -414,7 +414,7 @@
   },
   {
       "itemCode": 25,
-      "category": "car",
+      "category": "Vehicles",
       "imgLink": ["https://apollo-singapore.akamaized.net/v1/files/z6f7fu2ws8373-IN/image;s=780x0;q=60",
           "https://apollo-singapore.akamaized.net/v1/files/iiq1k672nwax2-IN/image;s=780x0;q=60"],
       "title": "Maruti Suzuki Swift Dzire (2017)",
@@ -436,7 +436,7 @@
   },
   {
       "itemCode": 26,
-      "category": "car",
+      "category": "Vehicles",
       "imgLink": ["https://apollo-singapore.akamaized.net/v1/files/895g7saxza4c-IN/image;s=780x0;q=60",
           "https://apollo-singapore.akamaized.net/v1/files/z6p1ty2jxozy1-IN/image;s=780x0;q=60"],
       "title": "Tata Tiago (2019)",
@@ -459,7 +459,7 @@
   },
   {
       "itemCode": 27,
-      "category": "car",
+      "category": "Vehicles",
       "imgLink": ["https://apollo-singapore.akamaized.net/v1/files/qvs5rsq9udqd3-IN/image;s=780x0;q=60",
           "https://apollo-singapore.akamaized.net/v1/files/tn1tf7sh5t4i-IN/image;s=780x0;q=60"],
       "title":"Hyundai I10 (2010)",
@@ -482,7 +482,7 @@
   },
   {
       "itemCode": 28,
-      "category": "Appliances",
+      "category": "Electronic",
       "imgLink":["https://apollo-singapore.akamaized.net/v1/files/ifi4fyy96hrs-IN/image;s=780x0;q=60",
       "https://apollo-singapore.akamaized.net/v1/files/tz8mme4s7tbz-IN/image;s=780x0;q=60"],
       "title": "Sony home theater system 5.1",
@@ -498,7 +498,7 @@
   },
   {
           "itemCode": 29,
-          "category": "mobiles",
+          "category": "Electronic",
           "imgLink":[ "https://apollo-singapore.akamaized.net/v1/files/hca2mtlq04xc3-IN/image;s=780x0;q=60",
               "https://apollo-singapore.akamaized.net/v1/files/t0j28zqxkiwe2-IN/image;s=780x0;q=60"
           ],
@@ -519,7 +519,7 @@
       },
       {
           "itemCode": 30,
-          "category": "mobiles",
+          "category": "Electronic",
           "imgLink":[ "https://apollo-singapore.akamaized.net/v1/files/v3ufs2qbka263-IN/image;s=780x0;q=60",
               "https://apollo-singapore.akamaized.net/v1/files/uaold4bye8at-IN/image;s=780x0;q=60"
           ],
@@ -541,7 +541,7 @@
 
       {
               "itemCode": 31,
-              "category": "laptop",
+              "category": "Electronic",
               "imgLink":["https://apollo-singapore.akamaized.net/v1/files/0e68yq3cdp352-IN/image;s=780x0;q=60",
                  "https://apollo-singapore.akamaized.net/v1/files/xgg7kxla1o342-IN/image;s=780x0;q=60"], 
               "title": "Asus Tuf Gaming FX505DT",
@@ -555,7 +555,7 @@
           },
   {
       "itemCode": 32,
-      "category": "laptop",
+      "category": "Electronic",
       "imgLink":["https://apollo-singapore.akamaized.net/v1/files/yx3p7519q92c1-IN/image;s=780x0;q=60",
          "https://apollo-singapore.akamaized.net/v1/files/2xi5kmnbgd4d3-IN/image;s=780x0;q=60"], 
       "title": "Sony wiow laptop",
@@ -568,7 +568,7 @@
       }
   },{
       "itemCode": 33,
-      "category": "laptop",
+      "category": "Electronic",
       "imgLink":["https://apollo-singapore.akamaized.net/v1/files/080wy2k6xxvs-IN/image;s=780x0;q=60"
          ], 
       "title": "Acer Predator Helios 300",
@@ -582,7 +582,7 @@
   },
   {
       "itemCode": 34,
-      "category": "laptop",
+      "category": "Electronic",
       "imgLink":["https://apollo-singapore.akamaized.net/v1/files/eu16p0vg2eer1-IN/image;s=780x0;q=60",
           "https://apollo-singapore.akamaized.net/v1/files/9vj1qq2487i81-IN/image;s=780x0;q=60"], 
       "title": "LAPTOP i3 2ND GENERATION",
@@ -596,7 +596,7 @@
   },
   {
       "itemCode": 35,
-      "category": "Camera",
+      "category": "Electronic",
       "imgLink":["https://apollo-singapore.akamaized.net/v1/files/8ae71ttjb9b6-IN/image;s=780x0;q=60",
           "https://apollo-singapore.akamaized.net/v1/files/gel42cmsd5o02-IN/image;s=780x0;q=60"], 
       "title": "Canon 200D mark-II, under warranty, with two lenses",
@@ -610,7 +610,7 @@
   },
   {
       "itemCode": 36,
-      "category": "Insutruments",
+      "category": "General",
       "imgLink":["https://apollo-singapore.akamaized.net/v1/files/qpkzedmqug2r-IN/image;s=1080x1080",
       "https://apollo-singapore.akamaized.net/v1/files/xyh0fsp2nx87-IN/image;s=780x0;q=60"], 
       "title": "Guitar hernix 38",
@@ -624,7 +624,7 @@
   },
   {
       "itemCode": 37,
-      "category": "Insutruments",
+      "category": "General",
       "imgLink":["https://apollo-singapore.akamaized.net/v1/files/cvuc7x5vzmqi2-IN/image;s=780x0;q=60",
       "https://apollo-singapore.akamaized.net/v1/files/rps0kgkh9idi-IN/image;s=780x0;q=60"], 
       "title": "Ibanez GRG 170DX With Ibanez 50W Amp",
@@ -638,7 +638,7 @@
   },
   {
       "itemCode": 38,
-      "category": "Insutruments",
+      "category": "General",
       "imgLink":["https://apollo-singapore.akamaized.net/v1/files/pd6h8osa2n311-IN/image;s=780x0;q=60",
       "https://apollo-singapore.akamaized.net/v1/files/bxzma8z35yqj2-IN/image;s=780x0;q=60"], 
       "title": "Casio ctx-9000",
@@ -653,7 +653,7 @@
   },
   {
       "itemCode": 39,
-      "category": "Insutruments",
+      "category": "General",
       "imgLink":["https://apollo-singapore.akamaized.net/v1/files/92ybdp8o4xcq1-IN/image;s=780x0;q=60",
       "https://apollo-singapore.akamaized.net/v1/files/klehi2uuo5u62-IN/image;s=780x0;q=60"], 
       "title": "Guitar Amplifier vox ac 30vr",
@@ -667,7 +667,7 @@
   },
   {
       "itemCode": 40,
-      "category": "Insutruments",
+      "category": "General",
       "imgLink":["https://apollo-singapore.akamaized.net/v1/files/3bqqgykqtgap-IN/image;s=780x0;q=60",
       "https://apollo-singapore.akamaized.net/v1/files/afkmi8oz5uw82-IN/image;s=780x0;q=60"], 
       "title": "Kadence pulse drum kit",

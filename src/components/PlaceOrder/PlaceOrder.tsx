@@ -1,7 +1,6 @@
 import { Flex, Button, FormControl, FormLabel, Input, Textarea, RadioGroup, Radio, Select, Grid, useToast } from '@chakra-ui/react'
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-
 import { useAppSelector , useAppDispatch} from '../../Redux/app/hooks'
 
 import { orderItem } from '../../Redux/features/Cart/Cart';
@@ -17,10 +16,16 @@ const PlaceOrder: React.FC = () => {
     const toast = useToast();
 
     const orderDone=()=>{
+        try {
+
+            
+        } catch (error) {
+            
+        }
         toast({
             position: 'top',
             title: 'Order placed successfully',
-            description: `We've placed order of ${sum}`,
+            description: `We've placed order of ${sum-1000}`,
             status: 'success',
             duration: 9000,
             isClosable: true,
@@ -32,6 +37,8 @@ const PlaceOrder: React.FC = () => {
 
     return (
         <div>
+            <form onSubmit={orderDone}>
+            
             <Flex direction={"column"} alignItems="center">
 
                 <Flex height={"10vh"} width={"100vw"} alignItems={"center"} justifyContent="center" fontSize={"4xl"}><Flex fontSize={"4xl"}>❝&nbsp;</Flex><Flex fontWeight={"bold"}>Order Summary</Flex> </Flex>
@@ -48,18 +55,18 @@ const PlaceOrder: React.FC = () => {
                                     <FormControl>
                                         {/* <FormLabel htmlFor='email'>Name</FormLabel> */}
                                         <Flex justifyContent={"space-between"} mt={4}>
-                                            <Input id='name' type='name' placeholder='Enter Name' width={"45%"} />
-                                            <Input id='phone' type='number' placeholder='Enter Mobile Number' width={"45%"} />
+                                            <Input isRequired id='name' type='name' placeholder='Enter Name' width={"45%"} />
+                                            <Input isRequired id='phone' type='number' placeholder='Enter Mobile Number' width={"45%"} />
                                         </Flex>
-                                        <Textarea id='address' placeholder='Address' mt={4} />
+                                        <Textarea isRequired id='address' placeholder='Address' mt={4} />
                                         <Flex justifyContent={"space-between"} mt={4}>
-                                            <Input id='city' type='name' placeholder='City' width={"45%"} />
-                                            <Input id='state' type='name' placeholder='State' width={"45%"} />
+                                            <Input isRequired id='city' type='name' placeholder='City' width={"45%"} />
+                                            <Input isRequired id='state' type='name' placeholder='State' width={"45%"} />
                                         </Flex>
                                         <Flex justifyContent={"space-between"} mt={4} borderBottom={"1px solid grey"} pb={5}>
-                                            <Input id='pin' type='number' placeholder='Pin' width={"45%"} />
+                                            <Input isRequired id='pin' type='number' placeholder='Pin' width={"45%"} />
                                             {/* <Input id='country' type='name' placeholder='Country' width={"45%"} /> */}
-                                            <Select id='country' placeholder='Select country' width={"45%"}>
+                                            <Select isRequired id='country' placeholder='Select country' width={"45%"}>
                                                 <option>India</option>
                                                 <option>Indonesia</option>
                                             </Select>
@@ -156,12 +163,15 @@ const PlaceOrder: React.FC = () => {
 
                     <Flex height={"10vh"} width={"90vw"} alignItems={"center"} justifyContent={"flex-end"} >
                         <Flex justifyContent={"center"} mr={2}>
-                            <Button backgroundColor={"orange.400"} width={"30vh"} height="12" fontSize={"2xl"} mb={2} onClick={()=>orderDone()}>Place order</Button>
+                            <Button backgroundColor={"orange.400"} width={"30vh"} height="12" fontSize={"2xl"} mb={2} type="submit">
+                                Place order
+                                </Button>
                         </Flex>
                     </Flex>
 
                 </Flex>
             </Flex>
+            </form>
         </div>
     )
 }

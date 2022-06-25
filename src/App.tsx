@@ -1,6 +1,4 @@
-import { Flex } from '@chakra-ui/react';
 import './App.css';
-import Filter from './components/Filter/Filter';
 import ItemBox from './components/ItemBox/ItemBox';
 import Navbar from './components/Navbar/Navbar';
 
@@ -16,7 +14,7 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Flex><Filter /><ItemBox /></Flex>}></Route>
+          <Route path="/" element={<ItemBox />}></Route>
           <Route path="/profile" element={<Profile/>}></Route>
           <Route path="/cart" element={<Cart/>}></Route>
           <Route path="/checkout" element={<PlaceOrder/>}></Route>

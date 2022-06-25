@@ -1,11 +1,12 @@
-import { Grid, GridItem } from '@chakra-ui/react'
-import React, { useContext, useEffect, useState } from 'react'
+import { Flex, Grid, GridItem } from '@chakra-ui/react'
+import React, { useEffect, useState } from 'react'
 import {Item} from '../Item/Item'
 import '../ItemBox/style.css'
 
 
 
 import data from '../data.json'
+import Filter from '../Filter/Filter'
 
 const ItemBox:React.FC = () => {
 
@@ -24,17 +25,58 @@ const ItemBox:React.FC = () => {
 
   // let newdata:Data[]=[];
   const [newdata, setNewdata] = useState<Data[]>([])
-  console.log('newdata',newdata)
+  // console.log('newdata',newdata)
+
+
+  const [fil , setFil] = useState<number []>([]);
   
-  // const [flag , setFlag] = useState(true);
+  
 
   useEffect(() =>{
-    setNewdata([])
-    data.map(da => (
-      ((da.category === 'mobiles' || da.category === 'Camera' || da.category === 'laptop' || da.category === 'Appliances')?setNewdata((newdata) => [...newdata, da]):console.log({da}))
-    ));
-    // setFlag(false);
-  },[])
+    // setNewdata([]);
+    console.log("Hello fil",fil);
+    (fil.length===0?setNewdata(data):setNewdata([]))
+    fil.map((item) => (
+      console.log(item),
+
+      (item===1?
+
+        data.map(da => (
+          ((da.category === 'Electronic')?setNewdata((newdata) => [...newdata, da]):console.log({da}))
+        ))
+
+      :console.log("Electronics")),
+
+      (item===2?
+
+        data.map(da => (
+          ((da.category === 'Vehicles')?setNewdata((newdata) => [...newdata, da]):console.log({da}))
+        ))
+
+      :console.log("Vechicles")),
+
+      (item===3?
+
+        data.map(da => (
+          ((da.category === 'Home')?setNewdata((newdata) => [...newdata, da]):console.log({da}))
+        ))
+
+      :console.log("Home")),
+
+
+      (item===4?
+
+        data.map(da => (
+          ((da.category === 'General')?setNewdata((newdata) => [...newdata, da]):console.log({da}))
+        ))
+
+      :console.log("General"))
+
+
+      
+    ))
+    
+  },[fil])
 
   
 
@@ -42,6 +84,9 @@ const ItemBox:React.FC = () => {
   
   return (
     <div className='itembox' style={{"alignItems":"center"}}>
+      <Flex>
+        <Filter fil={fil} setFil={setFil}/>
+      <Flex direction={"column"}>
       <h1 style={{"fontSize":"2rem","borderBottom":"1px solid grey"}}>Total Items - {newdata.length}</h1>
       
       <Grid templateColumns='repeat(4, 1fr)'>
@@ -60,9 +105,10 @@ const ItemBox:React.FC = () => {
         )}
 
       </Grid>
+      </Flex>
 
       
-      
+      </Flex>
     </div>
   )
 }

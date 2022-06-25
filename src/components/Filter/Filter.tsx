@@ -1,7 +1,14 @@
 import { Checkbox, Flex, RadioGroup } from '@chakra-ui/react'
-import React from 'react'
+import React, { Dispatch, SetStateAction } from 'react'
 import '../Filter/style.css'
-const Filter: React.FC = () => {
+
+type Props={
+  fil: number[]
+  setFil: Dispatch<SetStateAction<number[]>>
+}
+
+const Filter: React.FC <Props>= (props) => {
+  let {fil , setFil} = props;
   return (
     <div className="filter" >
 
@@ -19,10 +26,12 @@ const Filter: React.FC = () => {
         </Flex> */}
           <RadioGroup>
             <Flex direction={"column"} ml={3}>
-              <Checkbox value='1' mb={5} >Electronic Items</Checkbox>
-              <Checkbox value='2' mb={5}>Vehicles</Checkbox>
-              <Checkbox value='3' mb={5}>Home Accessories</Checkbox>
-              <Checkbox value='4' mb={5}>General Fitness</Checkbox>
+
+              <Checkbox value='1' mb={5} > <p onClick={() => {fil.includes(1)?setFil(fil.filter((item)=> item!=1)):(setFil([...fil,1]))}}>Electronic Items</p> </Checkbox>
+              <Checkbox value='2' mb={5} > <p onClick={() => {fil.includes(2)?setFil(fil.filter((item)=> item!=2)):(setFil([...fil,2]))}}>Vehicles</p> </Checkbox>
+              <Checkbox value='3' mb={5} > <p onClick={() => {fil.includes(3)?setFil(fil.filter((item)=> item!=3)):(setFil([...fil,3]))}}>Home Accessories</p> </Checkbox>
+              <Checkbox value='4' mb={5} > <p onClick={() => {fil.includes(4)?setFil(fil.filter((item)=> item!=4)):(setFil([...fil,4]))}}>General Fitness</p> </Checkbox>
+
             </Flex>
           </RadioGroup>
         </Flex>
