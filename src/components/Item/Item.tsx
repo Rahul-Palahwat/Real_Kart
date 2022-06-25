@@ -37,9 +37,9 @@ export const Item = (props:Props) => {
     // console.log({a: items.includes(itemCode), itemCode, items})
 
   return (
-    <div className='total' style={{"width":"100%"}}>
-        <div>
-        <Flex direction={"column"} alignItems="center" className='add' wrap={"wrap"} height="100%">
+    <div className='total' style={{"width":"100%","height":"100%"}}>
+        <Flex alignItems={"center"} justifyContent="center" width={"100%"} height="100%">
+        <Flex direction={"column"} alignItems="center" className='add' height="100%" width="100%">
             <Flex mt={2}><img src={image[0]} alt="Hello" style={{"height":"20vh","width":"20vh"}}/></Flex>
             <Flex mt={2}>{title}</Flex>
             <Flex>
@@ -71,7 +71,7 @@ export const Item = (props:Props) => {
             
             
         </Flex>
-        </div>
+        </Flex>
       
     </div>
   )
