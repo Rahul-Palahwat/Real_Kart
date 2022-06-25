@@ -86,7 +86,7 @@ const ItemBox:React.FC = () => {
     <div className='itembox' style={{"alignItems":"center"}}>
       <Flex>
         <Filter fil={fil} setFil={setFil}/>
-      <Flex direction={"column"}>
+      <Flex direction={"column"} width={"100%"}>
       <h1 style={{"fontSize":"2rem","borderBottom":"1px solid grey"}}>Total Items - {newdata.length}</h1>
       
       <Grid templateColumns='repeat(4, 1fr)'>
