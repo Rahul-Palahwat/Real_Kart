@@ -99,7 +99,7 @@ const ItemBox: React.FC = () => {
     // setNewdata(newdata.slice(indexOfFirstItem,indexOfLastItem))
     // console.log(indexOfFirstItem, indexOfLastItem, newdata.length)
 
-  }, [fil,pageNumber])
+  }, [fil])
 
   console.log(newdata.length)
 
@@ -110,7 +110,7 @@ const ItemBox: React.FC = () => {
       <Flex>
         <Filter fil={fil} setFil={setFil} />
         <Flex direction={"column"} width={"100%"}>
-          <h1 style={{ "fontSize": "2rem", "borderBottom": "1px solid grey" }}>Total Items-{newdata.length} :{indexOfFirstItem + 1} to {indexOfLastItem > newdata.length ? newdata.length : indexOfLastItem}  </h1>
+          <h1 style={{ "fontSize": "2rem", "borderBottom": "1px solid grey" }}>Showing Items-{indexOfFirstItem + 1} to {indexOfLastItem > newdata.length ? newdata.length : indexOfLastItem} of {newdata.length} </h1>
 
           <Grid templateColumns='repeat(4, 1fr)'>
             {pageData.map(newdat =>
@@ -128,11 +128,12 @@ const ItemBox: React.FC = () => {
             )}
 
           </Grid>
+          <Pagination itemsPerPage={itemsPerPage} totalItems={newdata.length} setPageNumber={setPageNumber} pageNumber={pageNumber}/>
         </Flex>
 
 
       </Flex>
-      <Pagination itemsPerPage={itemsPerPage} totalItems={newdata.length} setPageNumber={setPageNumber} pageNumber={pageNumber}/>
+      
     </div>
   )
 }
