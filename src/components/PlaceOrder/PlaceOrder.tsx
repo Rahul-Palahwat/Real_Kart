@@ -1,4 +1,4 @@
-import { Flex, Button, FormControl, FormLabel, Input, Textarea, RadioGroup, Radio, Select, Grid, useToast } from '@chakra-ui/react'
+import { Flex, Button, FormControl, FormLabel, Input, Textarea, RadioGroup, Radio, Select, Grid, useToast, useMediaQuery } from '@chakra-ui/react'
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useAppSelector , useAppDispatch} from '../../Redux/app/hooks'
@@ -6,6 +6,9 @@ import { useAppSelector , useAppDispatch} from '../../Redux/app/hooks'
 import { orderItem } from '../../Redux/features/Cart/Cart';
 
 const PlaceOrder: React.FC = () => {
+
+    const [isNotSmallerScreen] = useMediaQuery('(min-width: 960px)')
+    const [isPayment] = useMediaQuery('(min-width: 750px)')
 
     const dispatch = useAppDispatch();
 
@@ -40,17 +43,19 @@ const PlaceOrder: React.FC = () => {
             <form onSubmit={orderDone}>
             
             <Flex direction={"column"} alignItems="center">
+            {/* <Flex fontSize={"4xl"}>❝&nbsp;</Flex> */}
 
-                <Flex height={"10vh"} width={"100vw"} alignItems={"center"} justifyContent="center" fontSize={"4xl"}><Flex fontSize={"4xl"}>❝&nbsp;</Flex><Flex fontWeight={"bold"}>Order Summary</Flex> </Flex>
+                <Flex height={"10vh"} width={"100vw"} alignItems={"center"} justifyContent="center" fontSize={isNotSmallerScreen?"4xl":"2xl"}><Flex fontWeight={"bold"}>Order Summary</Flex></Flex>
 
 
-                <Flex height={"105vh"} width={"90vw"} direction={'column'}>
+                <Flex height={"auto"} width={"90vw"} direction={'column'}>
 
-                    <Flex height={"70vh"} >
-
-                        <Flex width={"60vw"} justifyContent={"center"} >
-                            <Flex width={"60vw"} direction="column" alignItems={"center"} >
-                                <Flex fontSize={"2xl"}>Shipping and Billing address</Flex>
+                    <Flex height={"auto"} direction={isNotSmallerScreen?"row":"column"}>
+                        <Flex direction={"column"} alignItems="center">
+ 
+                        <Flex width={isNotSmallerScreen?"60vw":"100%"} justifyContent={"center"} >
+                            <Flex width={"100%"} direction="column" alignItems={"center"} >
+                                <Flex fontSize={isNotSmallerScreen?"2xl":"1xl"}>Shipping and Billing address</Flex>
                                 <Flex width={"80%"} borderTop="1px solid grey" pb={4}>
                                     <FormControl>
                                         {/* <FormLabel htmlFor='email'>Name</FormLabel> */}
@@ -73,7 +78,7 @@ const PlaceOrder: React.FC = () => {
                                         </Flex >
                                         <RadioGroup mt={4} borderBottom="1px solid grey" pb={5}>
                                             <FormLabel htmlFor='radio'>Address Type</FormLabel>
-                                            <Flex justifyContent={"space-between"}>
+                                            <Flex justifyContent={"space-between"} direction={isPayment?"row":"column"}>
                                                 <Radio colorScheme='green' value='1' id="radio">
                                                     Home (AnyTime Delivery)
                                                 </Radio>
@@ -91,9 +96,38 @@ const PlaceOrder: React.FC = () => {
 
                         </Flex>
 
+                        <Flex height={"auto"} justifyContent={"center"}>
 
-                        <Flex width={"30vw"} borderRadius={5}>
-                            <Flex width={"30vw"} height={"auto"} direction={"column"} wrap="wrap">
+                        <Flex width={"100%"} direction={"column"} pb={3}>
+
+                            <Flex height={"4vh"} alignItems='center' fontWeight={"extrabold"} pb={5}>Payment Options:</Flex>
+
+
+                            <Flex mt={2}>
+                                <RadioGroup>
+                                    <Grid templateColumns={isPayment?"repeat(2,1fr)":"repeat(1,1fr)"}>
+                                        <Radio value='1' mb={5} width={"27vw"}>BHIM UPI</Radio>
+                                        <Radio value='2' mb={5}>Wallets</Radio>
+                                        <Radio value='3' mb={5}>Credit/Debit/ATM Card</Radio>
+                                        <Radio value='4' mb={5}>Net Banking</Radio>
+                                        <Radio value='5' mb={5}>EMI</Radio>
+                                        <Radio value='6' mb={5}>Cash On Delivery</Radio>
+                                    </Grid>
+                                </RadioGroup>
+                            </Flex>
+
+
+
+                        </Flex>
+
+
+                    </Flex>
+                    </Flex>
+
+
+
+                        <Flex width={"100%"} borderRadius={5} justifyContent="center">
+                            <Flex width={"80%"} height={"auto"} direction={"column"} wrap="wrap">
                                 <Flex height={"5vh"} fontSize="xl" ml="2" mt="2" borderBottom={"0.5px solid grey"} justifyContent="center">Price Details</Flex>
 
                                 <Flex ml="2" mt="4" justifyContent={"space-between"}>
@@ -130,39 +164,15 @@ const PlaceOrder: React.FC = () => {
                     </Flex>
 
 
-                    <Flex height={"33vh"} justifyContent={"center"}>
-
-                        <Flex width={"87%"} direction={"column"} pb={3}>
-
-                            <Flex height={"4vh"} alignItems='center' fontWeight={"extrabold"} pb={5}>Payment Options:</Flex>
-
-
-                            <Flex mt={2}>
-                                <RadioGroup>
-                                    <Grid templateColumns={"repeat(2,1fr)"}>
-                                        <Radio value='1' mb={5} width={"27vw"}>BHIM UPI</Radio>
-                                        <Radio value='2' mb={5}>Wallets</Radio>
-                                        <Radio value='3' mb={5}>Credit/Debit/ATM Card</Radio>
-                                        <Radio value='4' mb={5}>Net Banking</Radio>
-                                        <Radio value='5' mb={5}>EMI</Radio>
-                                        <Radio value='6' mb={5}>Cash On Delivery</Radio>
-                                    </Grid>
-                                </RadioGroup>
-                            </Flex>
-
-
-
-                        </Flex>
-
-                    </Flex>
+                    
 
 
 
 
 
 
-                    <Flex height={"10vh"} width={"90vw"} alignItems={"center"} justifyContent={"flex-end"} >
-                        <Flex justifyContent={"center"} mr={2}>
+                    <Flex height={"10vh"} width={"90vw"} alignItems={"center"} justifyContent={isNotSmallerScreen?"flex-end":"center"}>
+                        <Flex justifyContent={"center"}>
                             <Button backgroundColor={"orange.400"} width={"30vh"} height="12" fontSize={"2xl"} mb={2} type="submit">
                                 Place order
                                 </Button>
