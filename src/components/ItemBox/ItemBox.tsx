@@ -1,4 +1,4 @@
-import { Flex, Grid, GridItem } from '@chakra-ui/react'
+import { Flex, Grid, GridItem, useMediaQuery } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import { Item } from '../Item/Item'
 import '../ItemBox/style.css'
@@ -9,7 +9,22 @@ import data from '../data.json'
 import Filter from '../Filter/Filter'
 import Pagination from '../Pagination/Pagination'
 
-const ItemBox: React.FC = () => {
+
+interface Props{
+  search: string
+}
+
+const ItemBox: React.FC<Props> = (props) => {
+
+  const { search } = props;
+
+
+  // for responsiveness  
+  const [isNotSmallerScreen] = useMediaQuery('(min-width: 688px)');
+  const [isFilter] = useMediaQuery('(min-width: 900px)');
+
+  console.log("screen",{isNotSmallerScreen});
+  console.log("screen",{isFilter});
 
 
   interface Data {
@@ -48,13 +63,44 @@ const ItemBox: React.FC = () => {
 
   console.log("page", pageData.length);
 
+  const [searchData , setSearchData] = useState<Data[]>(data);
+
+
 
 
   useEffect(() => {
     // setNewdata([]);
-    console.log("Hello fil", fil);
+    // console.log("Hello fil", fil);
     setPageNumber(1);
-    (fil.length === 0 ? setNewdata(data) : setNewdata([]))
+
+    // logic to search globally in items 
+    // (fil.length === 0 && search!=="" ?
+
+    //    setSearchData(data.filter((da)=> {
+    //     Object.values(da).join(" ").toLowerCase().includes(search.toLowerCase())
+    //     // console.log("Objects", Object.values(da).join(" ").toLowerCase().includes(search.toLowerCase()))
+    //    }))
+       
+    //    : setNewdata([]));
+
+
+
+
+    // (fil.length === 0 && search==="" ?setNewdata(data) : setNewdata([]));
+
+
+
+    (fil.length === 0?setNewdata(data) : setNewdata([]));
+
+
+
+
+      //  console.log("search Data after console",searchData);
+
+
+
+
+
     fil.map((item) => (
       console.log(item),
 
@@ -99,20 +145,30 @@ const ItemBox: React.FC = () => {
     // setNewdata(newdata.slice(indexOfFirstItem,indexOfLastItem))
     // console.log(indexOfFirstItem, indexOfLastItem, newdata.length)
 
-  }, [fil])
 
-  console.log(newdata.length)
+  }, [fil,search])
 
+  // console.log(newdata.length)
 
+  
 
   return (
     <div className='itembox' style={{ "alignItems": "center" }}>
       <Flex>
-        <Filter fil={fil} setFil={setFil} />
+        {isFilter?
+          <Filter fil={fil} setFil={setFil} />
+        :""}
+         
+        
         <Flex direction={"column"} width={"100%"}>
-          <h1 style={{ "fontSize": "2rem", "borderBottom": "1px solid grey" }}>Showing Items-{indexOfFirstItem + 1} to {indexOfLastItem > newdata.length ? newdata.length : indexOfLastItem} of {newdata.length} </h1>
+          {isNotSmallerScreen?
+          <h1 style={{ "fontSize": "1.5rem", "borderBottom": "1px solid grey" }}>Showing Items-{indexOfFirstItem + 1} to {indexOfLastItem > newdata.length ? newdata.length : indexOfLastItem} of {newdata.length} </h1>
+          :
+          <h1 style={{ "fontSize": "1rem", "borderBottom": "1px solid grey" }}>Showing Items-{indexOfFirstItem + 1} to {indexOfLastItem > newdata.length ? newdata.length : indexOfLastItem} of {newdata.length} </h1>
+          }
+          
 
-          <Grid templateColumns='repeat(4, 1fr)'>
+          <Grid templateColumns={isNotSmallerScreen ? 'repeat(4, 1fr)' : 'repeat(2, 1fr)'}>
             {pageData.map(newdat =>
               <GridItem
                 w='95%' h='auto' bg='pink.50'
@@ -128,7 +184,9 @@ const ItemBox: React.FC = () => {
             )}
 
           </Grid>
+          <Flex justifyContent={"center"} alignItems="flex-end">
           <Pagination itemsPerPage={itemsPerPage} totalItems={newdata.length} setPageNumber={setPageNumber} pageNumber={pageNumber}/>
+          </Flex>
         </Flex>
 
 
