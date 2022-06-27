@@ -24,7 +24,7 @@ const CartItem:React.FC <Props> = (props) => {
     const {image, title, desc, price, itemCode} = props;
   return (
     <div>
-      <Flex wrap={"wrap"} mt={3} mb={2} width={"58vw"} height={"auto"} border="1px solid grey" alignItems={"center"}>
+      <Flex wrap={"wrap"} mt={3} mb={2} width={"58vw"} height={"auto"} border="1px solid grey" alignItems={"center"} justifyContent="center">
 
         <Flex width={"25vh"} height={"25vh"}>
             <img src={image[0]} alt="Image" style={{"height":"25vh","width":"25vh"}}/>
@@ -47,7 +47,7 @@ const CartItem:React.FC <Props> = (props) => {
 
         <Flex direction={"column"} alignItems="flex-end">
             <Flex mt={"auto"} ml="10">
-            <Button backgroundColor={"red.500"} width={"150px"} fontSize={"1xl"} onClick={()=>{dispatch(removeItem(itemCode))}}>Remove</Button>
+            <Button backgroundColor={"red.500"} width={"150px"} fontSize={"1xl"} onClick={()=>{dispatch(removeItem(itemCode))}} mb={3} mt={5}>Remove</Button>
             </Flex>
         </Flex>
       </Flex>
